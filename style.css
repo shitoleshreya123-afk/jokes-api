@@ -1,0 +1,75 @@
+body {
+  background: pink;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+.inline label {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+input, select {
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.url-box {
+  background: pink;
+  padding: 10px;
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+button {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+pre {
+  background: pink;
+  padding: 15px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.reset {
+  background:red;
+  margin-left: 10px;
+}
+
+.reset:hover {
+  background: #666;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .inline label {
+    display: block;
+  }
+}

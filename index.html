@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JokeAPI Documentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <h1>Joke-API </h1>
+
+  <!-- CATEGORY -->
+  <div class="row">
+    <label>Select category / categories:</label>
+    <div class="inline">
+      <label><input type="radio" name="catMode" checked value="Any"> Any</label>
+      <label><input type="radio" name="catMode" value="Custom"> Custom</label>
+      <label><input type="checkbox" class="cat" value="Programming"> Programming</label>
+      <label><input type="checkbox" class="cat" value="Misc"> Misc</label>
+      <label><input type="checkbox" class="cat" value="Dark"> Dark</label>
+      <label><input type="checkbox" class="cat" value="Pun"> Pun</label>
+      <label><input type="checkbox" class="cat" value="Spooky"> Spooky</label>
+      <label><input type="checkbox" class="cat" value="Christmas"> Christmas</label>
+    </div>
+  </div>
+
+  <!-- LANGUAGE -->
+   <div class="row">
+    <label>Select language:</label>
+    <select id="language">
+      <option value="en">en - English</option>
+      <!-- <option value="de">de - German</option>
+      <option value="fr">fr - French</option>
+      <option value="es">es - Spanish</option> -->
+    </select>
+  </div> 
+
+  <!-- FLAGS -->
+  <div class="row">
+    <label>Select flags to blacklist:</label>
+    <div class="inline">
+      <label><input type="checkbox" class="flag" value="nsfw"> nsfw</label>
+      <label><input type="checkbox" class="flag" value="religious"> religious</label>
+      <label><input type="checkbox" class="flag" value="political"> political</label>
+      <label><input type="checkbox" class="flag" value="racist"> racist</label>
+      <label><input type="checkbox" class="flag" value="sexist"> sexist</label>
+      <label><input type="checkbox" class="flag" value="explicit"> explicit</label>
+    </div>
+  </div>
+
+  <!-- FORMAT -->
+   <div class="row">
+    <label>Select response format:</label>
+    <label><input type="radio" name="format" checked value="json"> json</label>
+    <label><input type="radio" name="format" value="txt"> plain text</label>
+  </div> 
+
+  <!-- JOKE TYPE -->
+  <div class="row">
+    <label>Select at least one joke type:</label>
+    <label><input type="checkbox" class="type" value="single" checked> single</label>
+    <label><input type="checkbox" class="type" value="twopart" checked> twopart</label>
+  </div>
+
+  <!-- SEARCH -->
+   <div class="row">
+    <label>Search for a joke that contains:</label>
+    <input type="text" id="contains">
+  </div> 
+
+  <!-- ID RANGE -->
+  <!-- <div class="row">
+    <label>Search for a joke in ID range:</label>
+    From <input type="number" id="idFrom" value="0">
+    To <input type="number" id="idTo" value="1367">
+  </div> -->
+
+  <!-- AMOUNT -->
+  <div class="row">
+    <label>Amount of jokes:</label>
+    <input type="number" id="amount" value="1" min="1" max="10">
+  </div>
+
+  <!-- URL -->
+  <div class="url-box">
+    URL: <span id="url"></span>
+  </div>
+
+  <!-- <button onclick="sendRequest()">Send Request</button> -->
+
+  <!-- RESULT -->
+  <pre id="result">Result will appear here...</pre>
+
+  <div class="buttons">
+  <button onclick="sendRequest()">Send Request</button>
+  <button onclick="resetForm()" class="reset">Reset Form</button>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
